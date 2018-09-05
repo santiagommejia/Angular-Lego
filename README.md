@@ -1,4 +1,6 @@
-# AngularLego
+# Angular-Lego
+
+Demo project for a scalable angular application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
