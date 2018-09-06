@@ -1,5 +1,16 @@
-.example-card {
+.center-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+.login-card {
   max-width: 400px;
+}
+.card-title {
+  font-size: 20px;
 }
 .example-full-width {
   width: 100%;

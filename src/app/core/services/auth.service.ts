@@ -3,18 +3,18 @@ import { Injectable } from "@angular/core";
 @Injectable()
 export class AuthService {
 
-  private readonly hardUsername = 'Houdini';
-  private readonly hardPassword = 'bestmagician';
+  private readonly hardUsername = 'batman';
+  private readonly hardPassword = 'batman';
   private loggedIn: boolean = false;
 
   constructor() {
     console.log('Constructor AuthService');
   }
 
-  signInWithUsernameAndPassword(username: string, password: string): Promise<any> {
-    return new Promise<any>(resolve => {
+  signInWithUsernameAndPassword(username: string, password: string): Promise<boolean> {
+    return new Promise<boolean>(resolve => {
       this.loggedIn = (username === this.hardUsername && password === this.hardPassword);
-      resolve();
+      resolve(this.loggedIn);
     });
   }
 
