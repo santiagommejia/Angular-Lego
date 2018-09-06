@@ -13,7 +13,12 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private router: Router
   ) {
-    this.hackLogin();
+    // this.hackLogin();
+  }
+
+  onSubmit(event: any) {
+    console.log('submit clicked!: ',event);
+    
   }
 
   hackLogin() {

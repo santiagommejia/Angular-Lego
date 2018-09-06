@@ -23,6 +23,9 @@
       "@shared/*": [
         "app/shared/*"
       ],
+      "@material/*": [
+        "app/material-design/*"
+      ],
       "@util/*": [
         "app/shared/util/*"
       ]
