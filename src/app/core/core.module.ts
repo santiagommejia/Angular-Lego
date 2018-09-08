@@ -3,15 +3,9 @@ import { AuthGuardService } from "./services/auth-guard.service";
 import { AuthService } from "./services/auth.service";
 
 @NgModule({
-  declarations: [
-    // components and directives
-  ],
-  imports: [
-    // necessary modules
-  ],
-  exports: [
-    // components and directives
-  ],
+  declarations: [ /* components, pipes and directives */ ],
+  imports: [ /* module imports */ ],
+  exports: [ /* components, pipes and directives */ ],
 })
 export class CoreModule { 
   static forRoot(): ModuleWithProviders {

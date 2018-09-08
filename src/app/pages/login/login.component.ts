@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '@core/services/auth.service';
 import { FormGroup, AbstractControl, FormBuilder, Validators } from '@angular/forms';
@@ -8,7 +8,7 @@ import { FormGroup, AbstractControl, FormBuilder, Validators } from '@angular/fo
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
   form: FormGroup;
   username: AbstractControl;
@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private router: Router
   ) {
-    // this.hackLogin();
     this.initForm();
   }
 
@@ -38,23 +37,6 @@ export class LoginComponent implements OnInit {
       this.wrongCredentials = !success;
       success ? this.router.navigate(['welcome']) : null;
     });
-  }
-
-  hackLogin() {
-    setTimeout(() => {
-      this.authService.signInWithUsernameAndPassword('Houdini', 'bestmagician').then(() => {
-        this.authService.isLoggedIn() ?
-          this.router.navigate(['welcome']) :
-          this.showIncorrectCredentials();
-      });
-    }, 2000);
-  }
-
-  showIncorrectCredentials() {
-    console.error('incorrect credentials');
-  }
-
-  ngOnInit() {
   }
 
 }

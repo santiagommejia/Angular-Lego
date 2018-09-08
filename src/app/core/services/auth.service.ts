@@ -3,8 +3,8 @@ import { Injectable } from "@angular/core";
 @Injectable()
 export class AuthService {
 
-  private readonly hardUsername = 'batman';
-  private readonly hardPassword = 'batman';
+  private readonly hardUsername = 'mrrobot';
+  private readonly hardPassword = 'fsociety';
   private loggedIn: boolean = false;
 
   constructor() {
